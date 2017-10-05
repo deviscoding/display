@@ -6,7 +6,7 @@
 // Print Visibility
 @if feature(print) {
   @media print {
-    @each $d in $display {
+    @each $d in const(DISPLAY) {
       .d-print-#{$d} { display: $d; }
     }
   }
@@ -35,7 +35,7 @@
   }
 }
 
-@each $d in $display {
+@each $d in const(DISPLAY) {
   %ph-di-#{$d} {
     display: $d !important;
   }
