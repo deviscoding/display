@@ -1,5 +1,3 @@
-@import "../../base/scss/mixins/vendor-prefixes";
-
 @mixin display($criteria) {
   .d-#{$criteria}-none         { display: none !important; }
   .d-#{$criteria}-inline       { display: inline !important; }
