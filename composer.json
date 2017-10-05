@@ -1,0 +1,27 @@
+{
+  "name": "strapless/display",
+  "description": "Responsive classes for managing CSS display properties.",
+  "keywords": [
+      "responsive",
+      "display",
+      "sass",
+      "scss",
+      "strapless",
+      "css"
+  ],
+  "homepage": "https://www.github.com/strapless/display",
+  "version": "1.0",
+  "authors": [
+      {
+          "name": "Aaron M Jones",
+          "homepage": "http://www.jonesiscoding.com"
+      }
+  ],
+  "license": "MIT",
+  "require": {
+    "strapless/base": "^1.0"
+  },
+  "suggest": {
+    "exactquery/d.js": "^2.2"
+  }
+}
