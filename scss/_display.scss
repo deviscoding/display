@@ -1,0 +1,69 @@
+@import "../../base/scss/base";
+@import "display-mixins";
+
+// region ///////////////////////////////////////////////////////////////   Print/Screen Reader Classes
+
+// Print Visibility
+@if feature(print) {
+  @media print {
+    @each $d in $display {
+      .d-print-#{$d} { display: $d; }
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+// endregion ////////////////////////////////////////////////////////////   End Print/Screen Reader Classes
+
+// region ///////////////////////////////////////////////////////////////   Responsive Utils
+
+.no-js {
+  // We don't want to hide collapsed things if JS isn't enable to uncollapse them.
+  .collapse {
+    display: block;
+  }
+}
+
+@each $d in $display {
+  %ph-di-#{$d} {
+    display: $d !important;
+  }
+  .d-#{$d}, .touch .d-touch-#{$d}, .fallback .d-fallback-#{$d}, .baseline .d-baseline-#{$d}, .ios .d-ios-#{$d}, .android .d-android-#{$d} {
+    @extend %ph-di-#{$d};
+  }
+  // This one is backwards!  If it should only show with JS, the .no-js class negates it.
+  @if $d != none {
+    .no-js {
+      .d-js-#{$d} {
+        //noinspection SassScssUnresolvedPlaceholderSelector
+        @extend %ph-di-none;
+      }
+    }
+  }
+}
+
+@if $enable-framework == false {
+  @each $bp, $min in $grid-breakpoints {
+    @if $min == 0 {
+      @include display($bp)
+    } @else {
+      @media screen and (min-width: $min) {
+        @include display($bp);
+      }
+    }
+  }
+}
+
+// endregion ////////////////////////////////////////////////////////////   End Responsive Utils
+

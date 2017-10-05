@@ -1,0 +1,12 @@
+@import "../../base/scss/mixins/vendor-prefixes";
+
+@mixin display($criteria) {
+  .d-#{$criteria}-none         { display: none !important; }
+  .d-#{$criteria}-inline       { display: inline !important; }
+  .d-#{$criteria}-inline-block { display: inline-block !important; }
+  .d-#{$criteria}-block        { display: block !important; }
+  .d-#{$criteria}-table        { display: table !important; }
+  .d-#{$criteria}-table-cell   { display: table-cell !important; }
+  .d-#{$criteria}-flex         { display: flex !important; }
+  .d-#{$criteria}-inline-flex  { display: inline-flex !important; }
+}
