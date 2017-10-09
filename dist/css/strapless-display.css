@@ -1,5 +1,5 @@
 /*!
- * Strapless Display v1.0 (http://github.com/strapless/display)
+ * Strapless Display v1.0.1 (http://github.com/strapless/display)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
  * Licensed under MIT (https://github.com/strapless/display/blob/master/LICENSE)
  */
@@ -53,7 +53,9 @@
 }
 
 .d-flex, .touch .d-touch-flex, .fallback .d-fallback-flex, .baseline .d-baseline-flex, .ios .d-ios-flex, .android .d-android-flex {
-  display: flex !important;
+  display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
 }
 
 .d-inline, .touch .d-touch-inline, .fallback .d-fallback-inline, .baseline .d-baseline-inline, .ios .d-ios-inline, .android .d-android-inline {
@@ -61,7 +63,9 @@
 }
 
 .d-inline-flex, .touch .d-touch-inline-flex, .fallback .d-fallback-inline-flex, .baseline .d-baseline-inline-flex, .ios .d-ios-inline-flex, .android .d-android-inline-flex {
-  display: inline-flex !important;
+  display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
 }
 
 .d-inline-block, .touch .d-touch-inline-block, .fallback .d-fallback-inline-block, .baseline .d-baseline-inline-block, .ios .d-ios-inline-block, .android .d-android-inline-block {
@@ -93,11 +97,15 @@
 }
 
 .d-xs-flex {
-  display: flex !important;
+  display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
 }
 
 .d-xs-inline-flex {
-  display: inline-flex !important;
+  display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
 }
 
 @media screen and (min-width: 576px) {
@@ -120,10 +128,14 @@
     display: table-cell !important;
   }
   .d-sm-flex {
-    display: flex !important;
+    display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
   }
   .d-sm-inline-flex {
-    display: inline-flex !important;
+    display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
   }
 }
 
@@ -147,10 +159,14 @@
     display: table-cell !important;
   }
   .d-md-flex {
-    display: flex !important;
+    display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
   }
   .d-md-inline-flex {
-    display: inline-flex !important;
+    display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
   }
 }
 
@@ -174,10 +190,14 @@
     display: table-cell !important;
   }
   .d-lg-flex {
-    display: flex !important;
+    display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
   }
   .d-lg-inline-flex {
-    display: inline-flex !important;
+    display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
   }
 }
 
@@ -201,9 +221,13 @@
     display: table-cell !important;
   }
   .d-xl-flex {
-    display: flex !important;
+    display: -webkit-flex  !important;
+  display: -ms-flexbox  !important;
+  display: flex  !important;
   }
   .d-xl-inline-flex {
-    display: inline-flex !important;
+    display: -webkit-inline-box  !important;
+  display: -ms-inline-flexbox  !important;
+  display: inline-flex  !important;
   }
 }
