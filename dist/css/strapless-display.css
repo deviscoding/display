@@ -1,5 +1,5 @@
 /*!
- * Strapless Display v1.0.2 (http://github.com/strapless/display)
+ * Strapless Display v1.0.3 (http://github.com/strapless/display)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
  * Licensed under MIT (https://github.com/strapless/display/blob/master/LICENSE)
  */
@@ -72,6 +72,11 @@
   display: inline-block !important;
 }
 
+body::before {
+  content: "xs";
+  display: none !important;
+}
+
 .d-xs-none {
   display: none !important;
 }
@@ -109,6 +114,10 @@
 }
 
 @media screen and (min-width: 576px) {
+  body::before {
+    content: "sm";
+    display: none !important;
+  }
   .d-sm-none {
     display: none !important;
   }
@@ -140,6 +149,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  body::before {
+    content: "md";
+    display: none !important;
+  }
   .d-md-none {
     display: none !important;
   }
@@ -171,6 +184,10 @@
 }
 
 @media screen and (min-width: 992px) {
+  body::before {
+    content: "lg";
+    display: none !important;
+  }
   .d-lg-none {
     display: none !important;
   }
@@ -202,6 +219,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+  body::before {
+    content: "xl";
+    display: none !important;
+  }
   .d-xl-none {
     display: none !important;
   }

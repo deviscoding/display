@@ -1,14 +1,17 @@
 /**
- * Determines which breakpoint is currently active.
+ * Determines which breakpoint is currently active, either by querying for a psuedo element on the body
+ * or by injecting an element with display classes.
  *
  * @returns {jQuery}
  */
 jQuery.fn.extend( {
   isBreakpoint: function ( points ) {
+    var query = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content') || null;
+    if ( !points.constructor === Array ) { points = [ points ]; }
+    if (null !== query) { return (points.indexOf(query) !== -1); }
     var test  = false;
     var $body = $( 'body' );
     var cls = ' d-none d-sm-none d-md-none d-lg-none d-xl-none';
-    if ( !points.constructor === Array ) { points = [ points ]; }
     $.each( points, function ( index, alias ) {
       if ( !$body.find( '.detect-' + alias ).length ) {
         var tCls = 'detect-' + alias + cls;
