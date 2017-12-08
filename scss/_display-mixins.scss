@@ -8,3 +8,8 @@
   .d-#{$criteria}-flex         { display: flex !important; }
   .d-#{$criteria}-inline-flex  { display: inline-flex !important; }
 }
+
+@mixin display-responsive($breakpoint) {
+  body::before { content: "#{$breakpoint}"; display: none !important; }
+  @include display($breakpoint);
+}
