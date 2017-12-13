@@ -6,7 +6,7 @@
  */
 jQuery.fn.extend( {
   isBreakpoint: function ( points ) {
-    var query = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content') || null;
+    var query = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '') || null;
     if ( !points.constructor === Array ) { points = [ points ]; }
     if (null !== query) { return (points.indexOf(query) !== -1); }
     var test  = false;
