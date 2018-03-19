@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "require": {
-    "strapless/base": "^1.0"
+    "strapless/responsive": "^1.0"
   },
   "suggest": {
     "exactquery/d.js": "^2.2"

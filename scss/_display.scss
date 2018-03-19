@@ -3,7 +3,7 @@
 
 @if not($enable-framework) {
 /*!
- * Strapless Display v1.0.5 (http://github.com/strapless/display)
+ * Strapless Display v2.0 (http://github.com/strapless/display)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
  * Licensed under MIT (https://github.com/strapless/display/blob/master/LICENSE)
  */
@@ -47,7 +47,7 @@
   %ph-di-#{$d} {
     display: $d !important;
   }
-  .d-#{$d}, .touch .d-touch-#{$d}, .fallback .d-fallback-#{$d}, .baseline .d-baseline-#{$d}, .ios .d-ios-#{$d}, .android .d-android-#{$d} {
+  .d-#{$d}, .fallback .d-fallback-#{$d}, .baseline .d-baseline-#{$d}, .ios .d-ios-#{$d}, .android .d-android-#{$d} {
     @extend %ph-di-#{$d};
   }
   // This one is backwards!  If it should only show with JS, the .no-js class negates it.
@@ -70,6 +70,9 @@
         @include display-responsive($bp);
       }
     }
+  }
+  @include media("screen","touch") {
+    @include display("touch");
   }
 }
 
