@@ -1,5 +1,5 @@
 {
-  "name": "strapless/display",
+  "name": "deviscoding/display",
   "description": "Responsive classes for managing CSS display properties.",
   "keywords": [
       "responsive",
@@ -9,8 +9,8 @@
       "strapless",
       "css"
   ],
-  "homepage": "https://www.github.com/strapless/display",
-  "version": "1.0.5",
+  "homepage": "https://www.github.com/deviscoding/display",
+  "version": "1.0.7",
   "authors": [
       {
           "name": "Aaron M Jones",
@@ -18,10 +18,13 @@
       }
   ],
   "license": "MIT",
+  "replace": {
+    "strapless/display": "^1.0"
+  },
   "require": {
-    "strapless/responsive": "^1.0"
+    "deviscoding/responsive": "^1.0"
   },
   "suggest": {
-    "exactquery/d.js": "^2.2"
+    "deviscoding/device": "^3.0"
   }
 }
